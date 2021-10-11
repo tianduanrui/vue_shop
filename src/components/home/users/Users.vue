@@ -186,7 +186,7 @@ export default {
     },
     // 监听 页码值 改变的事件 当前页面值
     handleCurrentChange(newPage) {
-      console.log(newPage)
+    //   console.log(newPage)
       this.queryInfo.pagenum = newPage
       this.getUserList()
     },

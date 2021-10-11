@@ -22,7 +22,7 @@
           :collapse-transition="false"
           :router="true"
           :default-active="activePath"
-        >
+         >
           <!-- 一级菜单 -->
           <el-submenu :index="item.id + ''" v-for="item in menuList" :key="item.id">
             <!-- 一级菜单的模板区域 -->
@@ -174,6 +174,6 @@ export default {
   line-height: 24px;
   color: #fff;
   letter-spacing: 0.2em;
-  cursor: pointer;
+  cursor: pointer;//鼠标放上去有小手效果
 }
 </style>

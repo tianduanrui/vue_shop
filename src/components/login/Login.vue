@@ -68,7 +68,7 @@ export default {
           return this.$message.error('登录失败 帐号或密码错误!')
         }
         this.$message.success('登录成功!')
-        // 1. 将登录成功之后的 token,保存到客户端的 sessionStorage(会话机制/只在当前页面生效)中 localStorage(持久话机制/关闭页面也不会忘记数据)
+        // 1. 将登录成功之后的 token,保存到客户端的 sessionStorage(会话机制/只在当前页面生效)中 localStorage(持久化机制/关闭页面也不会忘记数据)
         //   1.1 项目中除了登录之外的API接口,必须在登录之后才能访问
         //   1.2 token 只应在当前网站打开期间生效, 所以将 token 保存在 sessionStorage中
         window.sessionStorage.setItem('token', res.data.token)

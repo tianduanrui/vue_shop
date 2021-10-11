@@ -19,11 +19,11 @@ import 'quill/dist/quill.bubble.css' // for bubble theme
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import axios from 'axios'
-// 在request拦截器中展示进度条 NProgress.start()
 // axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
 axios.defaults.baseURL = 'https://lianghj.top:8888/api/private/v1/'
 // axios.defaults.baseURL = 'https://www.liulongbin.top:8888/api/private/v1/'
 axios.interceptors.request.use(config => {
+// 在request拦截器中展示进度条 NProgress.start()
   NProgress.start()
   // 登录授权 请求验证是否有token  需要授权的 API ，必须在请求头中使用 `Authorization` 字段提供 `token` 令牌
   config.headers.Authorization = window.sessionStorage.getItem('token')
